@@ -1,0 +1,21 @@
+###改变start###
+
+python manage.py rebuild_index
+
+
+cd zanhu
+celery -A zanhu.taskapp worker -l info
+celery -A <mymodule> worker -l info -P eventlet
+celery -A zanhu.taskapp worker -l info -P eventlet
+celery -A zanhu.taskapp.celery:app worker -l info -P eventlet
+https://blog.csdn.net/Kwoky/article/details/83214449
+pip install django-celery-email==2.0.1
+pip install -U celery==4.1.1
+
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver 8005
+
+少加一个逗号
+
+pip freeze >requirements.txt
