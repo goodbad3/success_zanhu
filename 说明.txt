@@ -19,3 +19,5 @@ python manage.py runserver 8005
 少加一个逗号
 
 pip freeze >requirements.txt
+
+services.msc
