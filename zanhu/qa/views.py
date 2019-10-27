@@ -10,8 +10,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.decorators.http import require_http_methods
 from django.views.generic import CreateView, ListView, DetailView
-from django.views.decorators.cache import cache_page
-from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page#缓存get
+from django.utils.decorators import method_decorator#缓存get
 
 from zanhu.helpers import ajax_required
 from zanhu.qa.models import Question, Answer
@@ -58,7 +58,7 @@ class UnansweredQuestionListView(QuestionListView):
         return context
 
 
-@method_decorator(cache_page(60 * 60), name='get')
+@method_decorator(cache_page(60 * 60), name='get')#缓存get
 class CreateQuestionView(LoginRequiredMixin, CreateView):
     """用户提问"""
 
@@ -86,7 +86,7 @@ class QuestionDetailView(LoginRequiredMixin, DetailView):
         return Question.objects.select_related('user').filter(pk=self.kwargs['pk'])
 
 
-@method_decorator(cache_page(60 * 60), name='get')
+@method_decorator(cache_page(60 * 60), name='get')#缓存get
 class CreateAnswerView(LoginRequiredMixin, CreateView):
     """回答问题"""
     model = Answer

@@ -6,8 +6,8 @@ from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import CreateView, ListView, UpdateView, DetailView
 from django.urls import reverse
-from django.utils.decorators import method_decorator
-from django.views.decorators.cache import cache_page
+from django.utils.decorators import method_decorator#缓存get
+from django.views.decorators.cache import cache_page#缓存get
 
 from django_comments.signals import comment_was_posted
 
@@ -41,7 +41,7 @@ class DraftsListView(ArticlesListView):
         return Article.objects.filter(user=self.request.user).get_drafts()
 
 
-@method_decorator(cache_page(60 * 60), name='get')
+@method_decorator(cache_page(60 * 60), name='get')#缓存get
 class CreateArticleView(LoginRequiredMixin, CreateView):
     """创建文章"""
     model = Article

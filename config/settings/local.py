@@ -13,6 +13,7 @@ ALLOWED_HOSTS = ["*"]
 # CACHES
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#caches
+#缓存
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
@@ -25,7 +26,7 @@ CACHES = {
         }
     }
 }
-
+#缓存
 # TEMPLATES
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#templates

@@ -1,4 +1,4 @@
-{% load static thumbnail compress cache %}<!DOCTYPE html>
+{% load static thumbnail compress cache %}<!DOCTYPE html>{% #缓存 %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,7 +27,7 @@
 </head>
 <body>
 
-{% cache 3600 sidebar request.user.username %}
+{% cache 3600 sidebar request.user.username %} {% #缓存 %}
     <nav class="navbar fixed-top navbar-expand-sm bg-light">
         <div class="container">
             <a class="navbar-brand" href="{% url 'news:list' %}">赞 乎&nbsp;&nbsp;</a>
