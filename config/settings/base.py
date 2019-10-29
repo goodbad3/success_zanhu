@@ -283,16 +283,22 @@ CELERYD_TASK_SOFT_TIME_LIMIT = 60  # 任务的软时间限制，超时候SoftTim
 # django-allauth
 # ------------------------------------------------------------------------------
 ACCOUNT_ALLOW_REGISTRATION = env.bool('DJANGO_ACCOUNT_ALLOW_REGISTRATION', True)
+#改成False就不开放注册
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 ACCOUNT_AUTHENTICATION_METHOD = 'username'  # email/username_email
+#认证的字段
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 ACCOUNT_EMAIL_REQUIRED = True
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'  # none , optional
+#是否要验证邮件，mandatory(强制)
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 ACCOUNT_ADAPTER = 'zanhu.users.adapters.AccountAdapter'
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 SOCIALACCOUNT_ADAPTER = 'zanhu.users.adapters.SocialAccountAdapter'
+#adapters中定义的两个类
+#5-3此处详细配置
+#https://www.jianshu.com/p/41335d861a8d
 
 # django-compressor
 # ------------------------------------------------------------------------------

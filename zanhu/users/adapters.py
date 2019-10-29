@@ -11,7 +11,7 @@ class AccountAdapter(DefaultAccountAdapter):
 
     def is_open_for_signup(self, request: HttpRequest):
         return getattr(settings, "ACCOUNT_ALLOW_REGISTRATION", True)
-
+#5-3,
 
 class SocialAccountAdapter(DefaultSocialAccountAdapter):
 
