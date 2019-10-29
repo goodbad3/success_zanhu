@@ -14,7 +14,7 @@ urlpatterns = [
 
                   # 用户管理
                   path('users/', include('zanhu.users.urls', namespace='users')),
-                  path('accounts/', include('allauth.urls')),
+                  path('accounts/', include('allauth.urls')),#5-2
 
                   # 第三方应用
                   path('markdownx/', include('markdownx.urls')),

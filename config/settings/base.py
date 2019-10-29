@@ -26,7 +26,7 @@ TIME_ZONE = 'Asia/Shanghai'
 # https://docs.djangoproject.com/en/dev/ref/settings/#language-code
 LANGUAGE_CODE = 'zh-Hans'
 # https://docs.djangoproject.com/en/dev/ref/settings/#site-id
-SITE_ID = 1
+SITE_ID = 1 #5-2
 # https://docs.djangoproject.com/en/dev/ref/settings/#use-i18n
 USE_I18N = True  # 开启国际化支持
 # https://docs.djangoproject.com/en/dev/ref/settings/#use-l10n
@@ -65,7 +65,7 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS = [
     'channels',
     'crispy_forms',
-    'allauth',
+    'allauth',#5-2
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.github',
@@ -101,6 +101,9 @@ MIGRATION_MODULES = {
 # AUTHENTICATION
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#authentication-backends
+#5-2
+#django-allauth文档
+#https://django-allauth.readthedocs.io/en/latest/installation.html
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',  # django默认的认证
     'allauth.account.auth_backends.AuthenticationBackend',  # django-allauth的认证
@@ -209,7 +212,7 @@ TEMPLATES = [
             # https://docs.djangoproject.com/en/dev/ref/settings/#template-context-processors
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request',
+                'django.template.context_processors.request',#5.2
                 'django.contrib.auth.context_processors.auth',
                 'django.template.context_processors.i18n',
                 'django.template.context_processors.media',
