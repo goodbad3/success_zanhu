@@ -69,6 +69,8 @@ THIRD_PARTY_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.github',
+    #5-4详细配置
+    #https://www.jianshu.com/p/3352e27dc55e
     'sorl.thumbnail',
     'taggit',
     'markdownx',
