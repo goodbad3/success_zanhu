@@ -16,7 +16,7 @@ ALLOWED_HOSTS = ["*"]
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': f'{env("REDIS_URL", default="redis://127.0.0.1:6379")}/6',  # 网站缓存使用Redis 0
+        'LOCATION': f'{env("REDIS_URL", default="redis://127.0.0.1:6379")}/0',  # 网站缓存使用Redis 0
         'OPTIONS': {
             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
             # Mimicing memcache behavior.
