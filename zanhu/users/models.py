@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 # -*- coding:utf-8 -*-
-# __author__ = '__Jack__'
-
+#用户模型类 5-1 用户模块数据库设计
 from __future__ import unicode_literals
 
 from django.utils.encoding import python_2_unicode_compatible
