@@ -11,3 +11,5 @@ urlpatterns = [
     path("update/", views.UserUpdateView.as_view(), name="update"),
     path("<str:username>/", views.UserDetailView.as_view(), name="detail"),
 ]
+#http://127.0.0.1:8005/users/root/ -->> detail
+#http://127.0.0.1:8005/users/update/ -->>update

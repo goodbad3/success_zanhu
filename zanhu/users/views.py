@@ -10,10 +10,13 @@ from zanhu.users.models import User
 
 
 class UserDetailView(LoginRequiredMixin, DetailView):
+    #文档DetailView
+    #https://www.jianshu.com/p/d490114732db
+    #https://www.jianshu.com/p/e2354911487c
     model = User
     template_name = 'users/user_detail.html'
     slug_field = "username"
-    slug_url_kwarg = "username"
+    slug_url_kwarg = "username"#url链接中的username
 
     def get_context_data(self, **kwargs):
         context = super(UserDetailView, self).get_context_data(**kwargs)
@@ -43,10 +46,13 @@ class UserDetailView(LoginRequiredMixin, DetailView):
 
 class UserUpdateView(LoginRequiredMixin, UpdateView):
     """用户只能更新自己的信息"""
+    #文档UpdateView
+    #https://www.jianshu.com/p/8dcb88be2dd5
 
     model = User
     fields = ['nickname', 'email', 'picture', 'introduction', 'job_title', 'location',
               'personal_url', 'weibo', 'zhihu', 'github', 'linkedin']
+              #允许更改的字段,显示的字段
 
     template_name = 'users/user_form.html'
 

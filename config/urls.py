@@ -13,7 +13,7 @@ urlpatterns = [
                   path('', NewsListView.as_view(), name='home'),
 
                   # 用户管理
-                  path('users/', include('zanhu.users.urls', namespace='users')),
+                  path('users/', include('zanhu.users.urls', namespace='users')),#5-6
                   path('accounts/', include('allauth.urls')),#5-2
 
                   # 第三方应用
