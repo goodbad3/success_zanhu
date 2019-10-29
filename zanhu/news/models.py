@@ -18,8 +18,12 @@ from zanhu.notifications.views import notification_handler
 @python_2_unicode_compatible
 class News(models.Model):
     uuid_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    #文档UUIDField
+    #https://segmentfault.com/a/1190000016151866
     user = models.ForeignKey(settings.AUTH_USER_MODEL, blank=True, null=True, on_delete=models.SET_NULL,
                              related_name='publisher', verbose_name='用户')
+    #文档SET_NULL
+    #https://blog.csdn.net/weixin_43829633/article/details/89445432
     parent = models.ForeignKey("self", blank=True, null=True, on_delete=models.CASCADE,
                                related_name='thread', verbose_name='自关联')
     content = models.TextField(verbose_name='动态内容')
