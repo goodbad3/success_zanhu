@@ -2,7 +2,7 @@
 #https://liyuankun.cn/article/65/
 #celery -A zhihu.taskapp worker -l info
 #celery -A zanhu.taskapp worker -l info -P eventlet
-
+#https://liyuankun.cn/article/71/
 import os
 from celery import Celery
 from django.apps import apps, AppConfig
