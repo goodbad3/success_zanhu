@@ -63,6 +63,9 @@ TEMPLATES[0]['OPTIONS']['loaders'] = [  # noqa F405
     ),
 ]
 
+# 12-3 文档
+#https://www.lylinux.net/article/2017/2/12/10.html
+#https://www.jianshu.com/p/b15485285c0b
 # django-compressor
 # ------------------------------------------------------------------------------
 # https://django-compressor.readthedocs.io/en/latest/settings/#django.conf.settings.COMPRESS_ENABLED

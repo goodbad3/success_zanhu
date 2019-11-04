@@ -171,6 +171,8 @@ STATICFILES_DIRS = [  # 引用位于STATIC_ROOT中的静态文件时使用的网
 ]
 '''
 ###############开发##########
+#12.3 文档
+#https://www.lylinux.net/article/2017/2/12/10.html
 STATIC_ROOT = str(APPS_DIR('staticfiles'))
 STATIC_URL = '/static/'  
 STATICFILES_DIRS = [
@@ -179,6 +181,8 @@ STATICFILES_DIRS = [
 ###############开发##########
 ###改变end###
 # https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#staticfiles-finders
+#12.3 文档         compress
+#https://www.lylinux.net/article/2017/2/12/10.html
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
@@ -302,6 +306,9 @@ SOCIALACCOUNT_ADAPTER = 'zanhu.users.adapters.SocialAccountAdapter'
 #5-3此处详细配置
 #https://www.jianshu.com/p/41335d861a8d
 
+#文档 12.3
+#https://www.jianshu.com/p/b15485285c0b
+#https://www.lylinux.net/article/2017/2/12/10.html
 # django-compressor
 # ------------------------------------------------------------------------------
 # https://django-compressor.readthedocs.io/en/latest/quickstart/#installation
