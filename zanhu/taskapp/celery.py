@@ -1,3 +1,8 @@
+# celery 文档
+#https://liyuankun.cn/article/65/
+#celery -A zhihu.taskapp worker -l info
+#celery -A zanhu.taskapp worker -l info -P eventlet
+
 import os
 from celery import Celery
 from django.apps import apps, AppConfig

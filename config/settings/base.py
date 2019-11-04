@@ -76,7 +76,7 @@ THIRD_PARTY_APPS = [
     'markdownx',
     'django_comments',
     'haystack',#11
-    'djcelery_email',
+    'djcelery_email',#12-4
 ]
 LOCAL_APPS = [
     'zanhu.users.apps.UsersConfig',
@@ -263,7 +263,11 @@ EMAIL_HOST_USER = env('DJANGO_EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = env('DJANGO_EMAIL_HOST_PASSWORD')
 DEFAULT_FROM_EMAIL = env('DJANGO_DEFAULT_FROM_EMAIL')
 
-# Celery
+
+#12-4   
+# Celery 文档
+#https://liyuankun.cn/article/65/
+#celery -A zhihu.taskapp worker -l info
 # ------------------------------------------------------------------------------
 INSTALLED_APPS += ['zanhu.taskapp.celery.CeleryAppConfig']
 if USE_TZ:
@@ -285,6 +289,8 @@ CELERYD_TASK_TIME_LIMIT = 5 * 60  # 单个任务的最大运行时间5分钟
 # http://docs.celeryproject.org/en/latest/userguide/configuration.html#task-soft-time-limit
 # TODO: set to whatever value is adequate in your circumstances
 CELERYD_TASK_SOFT_TIME_LIMIT = 60  # 任务的软时间限制，超时候SoftTimeLimitExceeded异常将会被抛出
+
+
 
 # django-allauth
 # ------------------------------------------------------------------------------
