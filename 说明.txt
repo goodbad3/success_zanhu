@@ -17,3 +17,8 @@ python manage.py migrate
 python manage.py runserver 8005
 
 少加一个逗号
+
+
+#文档  集成了一个中文的django-haystack包
+#https://liyuankun.cn/article/55/
+#https://liyuankun.cn/article/55/
