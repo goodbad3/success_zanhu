@@ -2,7 +2,10 @@
 # -*- coding:utf-8 -*-
 # __author__ = '__Jack__'
 
-
+#11 文档
+#https://djangohaystack.readthedocs.io/en/latest/tutorial.html#add-haystack-to-installed-apps
+#Simply run ./manage.py rebuild_index. 
+#templates/           /base中改改        /  search文件夹中
 import datetime
 
 from haystack import indexes

@@ -19,7 +19,7 @@ urlpatterns = [
                   # 第三方应用
                   path('markdownx/', include('markdownx.urls')),
                   path('comments/', include('django_comments.urls')),
-                  path('search/', include('haystack.urls')),
+                  path('search/', include('haystack.urls')),#11
 
                   #  开发的应用
                   path('news/', include('zanhu.news.urls', namespace='news')),

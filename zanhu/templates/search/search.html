@@ -1,3 +1,4 @@
+<!--搜索，start-->
 {% extends 'base.html' %}
 {% load static thumbnail %}
 
@@ -15,6 +16,7 @@
         </nav>
         <!-- row -->
         <div class="row">
+            <!--col-md-3 ,start-->
             <div class="col-md-3">
                 <div class="list-group" id="list-tab" role="tablist">
                     <a class="list-group-item list-group-item-action active" id="list-articles-list" data-toggle="list" href="#list-articles"
@@ -33,6 +35,7 @@
                        aria-controls="tags">标签</a>
                 </div>
             </div>
+            <!--col-md-3 ,end-->
             <div class="col-md-9">
                 <div class="tab-content" id="nav-tabContent">
                     {% for result in page.object_list %}

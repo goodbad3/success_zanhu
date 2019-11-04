@@ -75,7 +75,7 @@ THIRD_PARTY_APPS = [
     'taggit',
     'markdownx',
     'django_comments',
-    'haystack',
+    'haystack',#11
     'djcelery_email',
 ]
 LOCAL_APPS = [
@@ -86,7 +86,7 @@ LOCAL_APPS = [
     'zanhu.qa.apps.QaConfig',
     'zanhu.messager.apps.MessagerConfig',
     'zanhu.notifications.apps.NotificationsConfig',
-    'zanhu.search.apps.SearchConfig',
+    'zanhu.search.apps.SearchConfig',#11
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -326,6 +326,9 @@ CHANNEL_LAYERS = {
         },
     },
 }
+
+#11 文档
+#https://djangohaystack.readthedocs.io/en/latest/tutorial.html#configuration
 '''
 HAYSTACK_CONNECTIONS = {
     'default': {
@@ -347,5 +350,7 @@ HAYSTACK_CONNECTIONS = {
 }
 
 HAYSTACK_SEARCH_RESULTS_PER_PAGE = 20  # 分页
+#文档
+#https://djangohaystack.readthedocs.io/en/latest/signal_processors.html
 # 实时信号量处理器，模型类中数据增加、更新、删除时自动更新索引
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
